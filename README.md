@@ -1,98 +1,81 @@
-# Analisis Transaksi Transportasi Umum Transjakarta di bulan April 2023 - Dummy Data
+# Analisis Transaksi Transjakarta (April 2023) - Dummy Data
+> **Learning Project** : In this project, I performed an end-to-end analysis process, including gathering business requirements, data cleaning, exploratory data analysis, statistical analysis, and developing interactive dashboards using Tableau. 
 
-## Links
+## 🔗 Project Outcome
 
----
+📎Raw data source: [Kaggle Dataset](https://www.kaggle.com/datasets/dikisahkan/transjakarta-transportation-transaction)
 
-[Data Source](https://www.kaggle.com/datasets/dikisahkan/transjakarta-transportation-transaction)
+🖼️Presentation Slides (In Indonesian): [Canva](https://canva.link/uvieriu6f8qzg36)
 
-[Tableau](https://public.tableau.com/app/profile/nadia.syailendra8148/viz/TransjakartaDashboard_17757520465640/TransjakartaDashboard)
+📊Analytics Dashboard: [Tableau](https://public.tableau.com/app/profile/nadia.syailendra8148/viz/TransjakartaDashboard_17757520465640/TransjakartaDashboard)
 
-## Overview
-
----
-
-In this project, I performed an end-to-end analysis process, including gathering business requirements, data cleaning, exploratory data analysis, statistical analysis, and developing interactive dashboards using Tableau. 
 
 ## Business Understanding
 
----
+Unlike private businesses, most public transport systems aren’t trying to maximize profit — their primary goal is mobility. It’s about moving people efficiently, safely, and affordably. [[1]](https://www.yieldtactics.com/en/insights/rm-public-transport)
 
-Tidak seperti bisnis komersil, transportasi publik umumnya tidak berusaha memaksimalkan profit, melainkan fokus terhadap mobilitas penumpang. 
-
-Transportasi publik memudahkan penumpang menuju tujuannya secara efisien, aman dan dengan harga terjangkau.
-
-### Problem Statement
-
----
-
-Menganalisis rute koridor, arah rute dan jam-jam dimana jumlah penumpang tinggi pada transportasi Transjakarta selama bulan April 2023.
-
-Tujuan: Analisis ini akan digunakan oleh operator Transjakarta untuk meningkatkan operasional yang lebih efisien dan nyaman 
+This aligns with TransJakarta mission and values to provide an integrated transportation services that make life in Jakarta easier and more enjoyable. [[2]](https://transjakarta.co.id/tentang/visi-misi-dan-nilai)
 
 
-### Key Questions
+## Problem Statement
 
----
+Analyze corridor route, direction route and peak hours in TransJakarta transaction on April 2023.
 
-1. Rute koridor apa yang paling ramai penumpang?
-2. Rute koridor cenderung ramai di arah pergi atau arah pulang?
-3. Kapan jam sibuk (peak hour) terjadi?
-4. Halte apa penumpang paling banyak naik?
-5. Bagaimana distribusi usia penumpang transjakarta?
-6. Apakah rata-rata waktu tempuh saat weekend lebih cepat dari weekday?
+Objective: This analysis will be used by Transjakarta operators to enhance operations, making them more efficient and comfortable. 
 
 
-### Tools
+## Key Questions
 
----
+1. Which corridor route has the highest passenger volume?
+2. Do corridor routes tend to be busier in the outbound or inbound direction?
+3. When do peak hours occur?
+4. At which stops do the most passengers board?
+5. What is the age distribution of TransJakarta passengers?
+6. Is the average travel time faster on weekends compared to weekdays?
 
-Programming Language: Python, SQL
 
-Library: Pandas
+## Tools
 
-Visualization: Tableau
+Programming Language: Python (Pandas)
+
+Analytics Dashboard: Tableau
 
 Presentation Slides: Canva
 
 
-## Hasil Analisis
+## Result
 
----
+1. Which corridor route has the highest passenger volume?\
+Cibubur - Balai Kota corridor route
 
-1. Rute yang paling ramai?
-Rute koridor Cibubur - Balai Kota
+2. Do corridor routes tend to be busier in the outbound or inbound direction?\
+The outbound and inbound routes have nearly equal (consistent) passenger volumes
 
-2. Lebih ramai mana, rute arah pergi atau pulang?
-Rute arah berangkat dan arah pulang memiliki jumlah penumpang yang hampir sama (konsisten)
+3. When do peak hours occur?\
+5:00 AM – 9:00 AM and 4:00 PM – 9:00 PM.
 
-3. Kapan peak hour nya?
-Jam 5 - 9 di pagi hari dan 4 - 9 di malam hari
+4. At which stops do the most passengers board?\
+Halte Penjaringan bus stop
 
-4. Halte apa yang paling ramai?
-Halte Penjaringan
+5. What is the age distribution of TransJakarta passengers?\
+The average is 35.
 
-5. Mean penumpang Transjakarta 35
+6. Is the average travel time faster on weekends compared to weekdays?\
+Based on hypothesis T-test to compare average travel times on weekends versus weekdays yielded a p-value of 0.04 < 0.05. This means that there is no significant difference between travel on weekdays vs weekend.
 
-6. Menggunakan uji T-test untuk mengetahui apakah rata-rata waktu tempuh saat weekend lebih cepat dari weekday menghasilkan p-value 0.04 < 0.05
+## Conclusion
 
-## Kesimpulan
+Transjakarta passengers are residents of the Greater Jakarta area (Jabodetabek) living in densely populated neighborhoods.
 
----
+They choose Transjakarta as their preferred mode of transport for commuting to work on weekdays or traveling on weekends.
 
-Penumpang Transjakarta adalah warga Jabodetabek yang tinggal di daerah padat penduduk 
-
-Penumpang menggunakan Transjakarta sebagai moda transportasi pilihan untuk pergi bekerja pada hari kerja atau berpergian ke daerah pusat kota di akhir pekan
-
-Rata-rata penumpang berada dalam usia produktif yaitu 35-36 tahun
+The average passenger is of working age, specifically between 35 and 36 years old.
 
 
-## Rekomendasi
+## Recommendations
 
----
+Planning bus allocations based on corridor routes and peak hours to ensure passenger comfort and prevent overcrowding at bus stops and on the buses themselves.
 
-Perencanaan alokasi bus sesuai dengan rute koridor dan peak hour agar penumpang nyaman dan tidak berdesakan di halte dan bus 
+Expanding feeder or Microtrans services to better reach densely populated residential areas, with subsequent integration into the nearest BRT stations.
 
-Penambahaan layanan feeder atau mikrotrans yang bisa lebih menjangkau ke daerah perumahan yang padat penduduk untuk kemudian diintegrasikan ke halte BRT terdekat
-
-Mempertahankan layanan Transjakarta yang sudah bagus menghubungkan kehidupan penumpangnya
+Maintaining the high-quality Transjakarta service that connects passengers to their daily lives.
